@@ -14,10 +14,10 @@ from random import randint
 # config
 today = date.today().strftime("%m/%d/%Y")
 temperature = '36.'+str(randint(3,8))
-idx = '135163'
+idx = '1XXXXX' # your employee ID
 
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
-opt = webdriver.ChromeOptions()
+opt = webdriver.ChromeOptions(path = 'your/path') # absolute path to the chromredriver.exe
 opt.add_argument('--user-agent=%s' % user_agent)
 browser = webdriver.Chrome(executable_path="chromedriver.exe")
 
